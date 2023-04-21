@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>清华，我的梦！·续-宅萌</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="meta 清华 大学 读书 留学 就业">
+<meta name="description" content="meta 一款以考上大学为主题的手机游戏">
+</head>
+<body>
+    <div id="inputs">
+        <form>
+            <label>请输入输入你的姓名:</label><br>
+            <input type="text" value = '张三' id="name"><br>
+            <label>输入要报考或已读的大学：</label><br>
+            <input type="text" value = '清华大学' id="campus"><br>
+            <button type="button" onclick="newbe()">入学</button>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function newbe(){
+            var name = document.getElementById('name').value;
+            var campus = document.getElementById('campus').value;
+            sessionStorage.setItem('name1', name);
+            sessionStorage.setItem('campus1', campus);
+            var get_name = sessionStorage.getItem("name1");
+            var get_campus = sessionStorage.getItem("campus1");
+            console.log(get_name); 
+            console.log(get_campus); 
+            window.location.href="2.html";
+        }
+    </script>
+</body>
+</html>
